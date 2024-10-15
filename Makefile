@@ -1,6 +1,6 @@
 .PHONY: all start stop clean
 
-all: fifo_server fifo_client
+all: sock_server sock_client fifo_server fifo_client
 
 start: fifo_server fifo_client
 	./fifo_server &
@@ -14,7 +14,7 @@ stop:
 	echo
 
 clean:
-	rm fifo_server fifo_client
+	rm fifo_server fifo_client sock_server sock_client
 
 # Compile common.c with fifo_server & fifo_client.
 CFLAGS += common.c

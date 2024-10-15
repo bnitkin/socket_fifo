@@ -6,7 +6,7 @@ char train[][10] = {"chugga ", "choo ", "\b!!\n"};
 void main() {
     printf("Hello from server\n");
 
-    init();
+    mkfifo(FIFO, 0666);
     int fd = open(FIFO, O_WRONLY);
     char* str;
 

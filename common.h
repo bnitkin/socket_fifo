@@ -1,3 +1,4 @@
+// FIFO stuff
 #include <sys/stat.h>
 //#include <sys/types.h>
 #include <fcntl.h>
@@ -6,4 +7,8 @@
 
 #define FIFO "/home/ben/fifo/namedpipe"
 
-void init();
+// Socket stuff
+#include <sys/socket.h>
+#include <netinet/in.h>
+
+#define PORT 25506

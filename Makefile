@@ -15,6 +15,3 @@ stop:
 
 clean:
 	rm fifo_server fifo_client sock_server sock_client
-
-# Compile common.c with fifo_server & fifo_client.
-CFLAGS += common.c

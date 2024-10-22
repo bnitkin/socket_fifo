@@ -1,0 +1,25 @@
+cc_binary {
+    relative_install_path: "hw",
+    vendor: true,
+    name: "socket_client",
+    srcs: [
+        "sock_client.c",
+    ],
+    cppflags: [
+           "-Wall",
+           "-std=c++17",
+    ],
+}
+
+cc_binary {
+    relative_install_path: "hw",
+    vendor: true,
+    name: "socket_server",
+    srcs: [
+        "sock_server.c",
+    ],
+    cppflags: [
+           "-Wall",
+           "-std=c++17",
+    ],
+}

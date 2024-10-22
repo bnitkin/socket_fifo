@@ -27,7 +27,7 @@ void main() {
     memset(&addr, 0, sizeof(addr));
     addr.sin_family = AF_INET;
     addr.sin_port = htons(PORT);
-    addr.sin_addr.s_addr = INADDR_BROADCAST;
+    inet_aton("127.255.255.255", &addr.sin_addr.s_addr);
     int status = bind(tx_sock, (struct sockaddr*) &addr, sizeof(addr));
 
     int i = 0;
